@@ -1,47 +1,74 @@
-// .formWrapper {
-//   display: flex;
-//   flex-direction: column;
-//   width: 40%;
-// //   min-width: 500px;
-//   margin: auto;
-// }
-// .pairWrapper {
-//   display: flex;
-//   justify-content: space-around;
-//   padding: 0;
-//   margin: 0;
-//   > * {
-//     margin-left: -20px;
-//     margin-bottom: 10px;
-//     // width: 40%;
-//   }
-// }
-// // .pairWrapper .InputText {
-// //   flex: 1; /* Равномерное распределение ширины внутри каждой пары */
-// // }
+* {
+  box-sizing: border-box;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  min-width: 250px;
+  margin: auto;
 
-// .radio {
-//   margin: 0;
-//   padding: 0;
-// }
-// .heading3 {
-//   margin: 0;
-//   padding: 0;
-// }
-// .btn {
-//   width: 100%;
-//   height: 40px;
-//   margin-top: 10px;
-//   border: none;
-//   border-radius: 2px;
-//   text-transform: uppercase;
-//   background-color: #26d5cd;
-//   color: #fff;
-// }
+}
+.pairWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
 
-// @media (max-width: 768px) {
-//   /* Одиночные стили для текстовых полей */
-//   .pairWrapper {
-//     flex-direction: column; /* Расположить элементы в столбце */
-//   }
-// }
+}
+.error {
+  margin-top: 20px;
+  background-color: red;
+}
+.btn {
+  width: 100%;
+  min-width: 250px;
+  height: 60px;
+  margin: 10px auto;
+  padding: 0;
+  border: 1px solid #26d5cd;
+  border-radius: 3px;
+  background-color: #26d5cd;
+  color: white;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.describeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  > h3 {
+    padding: 10px 5px 5px 40px;
+    margin: 0;
+  }
+  > p {
+    padding: 0 5px 10px 40px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pairWrapper {
+    flex-direction: column;
+  }
+  .btn {
+    width: 30vw;
+    min-width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .formWrapper {
+    min-width: 520px;
+  }
+  // .pairWrapper {
+  //   flex-direction: row;
+  // }
+
+  .btn {
+    width: 100%;
+    min-width: 250px;
+  }
+}

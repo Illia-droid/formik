@@ -1,9 +1,24 @@
-// .label{
-//     padding: 0;
-//     margin: 0;
-// }
-// .invalid{
-//     padding: 5px;
-//     background-color: #fff;
-//     border: 1px red solid;
-// }
+.label {
+  box-sizing: border-box;
+  width: 35vw;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid #fff;
+}
+.invalid {
+  border-color: red;
+}
+.radio {
+  position: absolute;
+  left: 1%;
+  top: 14%;
+}
+@media screen and (min-width: 768px) {
+  .label {
+    width: 100%;
+    min-width: 250px;
+  }
+}

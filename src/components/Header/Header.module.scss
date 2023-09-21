@@ -2,19 +2,19 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 20px auto 100px;
 }
-.logo{
-    width: 15vw;
-    min-width:100px
+.logo {
+  width: 15vw;
+  min-width: 100px;
 }
 .btn {
   width: 7vw;
   min-width: 70px;
   height: 5vh;
-  min-height:20px;
+  min-height: 20px;
 
-  border:1px solid #fff;
+  border: 1px solid #fff;
   border-radius: 3px;
   background-color: #ffffff00;
   color: #fff;

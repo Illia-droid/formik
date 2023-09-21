@@ -1,33 +1,40 @@
-// .input {
-//   width: 90%;
-//   height: 30px;
-//   position: relative;
-//   display: block;
-//   margin: 10px auto 0;
-//   padding: 5px 20px;
-//   background-color: #fff;
-//   border: none;
-//   border-radius: 2px;
-//   outline: none;
-// }
-// .invalid {
-//   background-color: rgba(255, 0, 0, 0.802);
-// }
+.input {
+  width: 30vw;
+  min-width: 250px;
+  height: 60px;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.7s;
+}
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.696);
+}
+.error {
+  display: block;
+  position: absolute;
+  margin: auto;
+  border-radius: 2px;
+  background-color: #ff3333;
+  text-align: center;
+  color: #fff;
+  z-index: 999;
+}
 
-// .error {
-//   display: block;
-//   position: absolute;
-//   margin: auto;
-//   border-radius: 2px;
-//   background-color: red;
-//   text-align: center;
-//   color: #fff;
-//   z-index: 999;
-// }
-
-// @media (max-width: 768px) {
-//   .input {
-//     margin: auto;
-//     width: 90%; /* Занимать всю доступную ширину */
-//   }
-// }
+.invalid {
+  background-color: #b10101;
+}
+@media screen and (min-width: 768px) {
+  .inputForSignUp {
+    width: 15vw;
+    min-width: 250px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .inputForSignUp {
+    width: 17vw;
+    min-width: 250px;
+  }
+}
