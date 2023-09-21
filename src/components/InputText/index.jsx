@@ -4,12 +4,18 @@ import { ErrorMessage, Field } from "formik";
 import cx from "classnames";
 import styles from "./InputText.module.scss";
 
-const InputText = ({ name, ...options }) => {
+const InputText = ({ name, id, ...options }) => {
   return (
     <label className={styles.label}>
       <Field name={name}>
         {({ field, meta }) => {
-          const classNames = cx(styles.input, {
+          let inputClass;
+          if (id === 'in') {
+            inputClass=styles.inputForSignIn
+          } else if(id === 'up'){
+            inputClass=styles.inputForSignUp
+          }
+          const classNames = cx(inputClass,styles.input, {
             [styles.invalid]: meta.touched && meta.error,
           });
           return <input {...options} {...field} className={classNames} />;

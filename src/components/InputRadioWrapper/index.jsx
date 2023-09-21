@@ -8,14 +8,14 @@ const InputRadioWrapper = ({ name, value, children, ...options }) => {
   return (
     <Field name={name}>
       {({ field, meta, form }) => {
-        const classnames = cx(styles.label, {
+        const classNames = cx(styles.label, {
           [styles.invalid]: meta.error,
         });
         const isCheked = field.value === value;
 
         return (
-          <label className={classnames}>
-            <input {...field} {...options} value={value} checked={isCheked} />
+          <label className={classNames}>
+            <input {...field} {...options} value={value} checked={isCheked} className={styles.radio}/>
             {children}
           </label>
         );

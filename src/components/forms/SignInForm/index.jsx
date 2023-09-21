@@ -14,7 +14,7 @@ const SignInForm = () => {
     console.log(values);
     formikBag.resetForm();
   };
-  
+
   return (
     <Formik
       initialValues={initialValues}
@@ -22,8 +22,8 @@ const SignInForm = () => {
       validationSchema={SIGN_IN_SCHEMA}
     >
       <Form className={styles.formWrapper}>
-        <InputText type="email" name="email" placeholder="Email address" />
-        <InputText type="password" name="password" placeholder="Password" />
+        <InputText type="email" name="email" id='in' placeholder="Email address" className={styles.inputText}/>
+        <InputText type="password" name="password" id='in' placeholder="Password" className={styles.inputText}/>
         <button type="submit" className={styles.btn}>login</button>
       </Form>
     </Formik>
